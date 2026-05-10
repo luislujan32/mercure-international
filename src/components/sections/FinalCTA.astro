@@ -1,25 +1,28 @@
 ---
-import Button from "@ui/Button.astro";
 import Container from "@ui/Container.astro";
+import QuoteForm from "@sections/QuoteForm";
+import { siteConfig } from "@config/site";
 ---
 
 <section id="cotizar" class="section-padding bg-white">
   <Container>
-    <div class="rounded-xl bg-marine p-8 text-white shadow-premium md:p-12">
-      <div class="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
+    <div class="rounded-xl bg-marine p-6 text-white shadow-premium md:p-10 lg:p-12">
+      <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
         <div>
           <p class="text-sm font-semibold uppercase tracking-[0.14em] text-gold">Pre-cotización</p>
           <h2 class="mt-3 max-w-2xl font-display text-3xl font-extrabold md:text-5xl">
             Contanos qué querés importar
           </h2>
           <p class="mt-5 max-w-2xl text-base leading-8 text-mist">
-            Compartinos los datos principales de tu operación y te orientamos sobre los
-            próximos pasos para coordinar la logística internacional.
+            Contanos qué querés importar y un asesor podrá orientarte sobre la mejor
+            alternativa logística para tu operación internacional.
+          </p>
+          <p class="mt-5 max-w-xl border-l-4 border-signal pl-4 text-sm leading-7 text-mist">
+            No hace falta tener todos los datos cerrados. Podemos empezar por analizar el
+            producto, el origen, el destino y el nivel de urgencia.
           </p>
         </div>
-        <Button href="#cotizar" variant="secondary" size="lg" class="bg-white">
-          Solicitar asesoramiento
-        </Button>
+        <QuoteForm client:visible whatsappNumber={siteConfig.whatsappNumber} />
       </div>
     </div>
   </Container>
