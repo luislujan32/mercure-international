@@ -1,0 +1,97 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@ui/Button.astro";
+import Container from "@ui/Container.astro";
+import SectionHeader from "@ui/SectionHeader.astro";
+import { serviceSchema } from "@lib/schema";
+
+const title = "Importar desde China a Argentina | Mercure Internacional";
+const description =
+  "Asesoramiento logístico para importar desde China a Argentina con análisis de producto, carga aérea, marítima o consolidada, documentación y entrega final.";
+const pageFaq = [
+  {
+    question: "¿Puedo consultar antes de comprar en China?",
+    answer:
+      "Sí. Es recomendable analizar producto, proveedor, volumen, origen y destino antes de avanzar para reducir incertidumbre logística."
+  },
+  {
+    question: "¿La carga puede venir consolidada desde China?",
+    answer:
+      "Según el tipo de mercadería, volumen y condiciones de la operación, podemos evaluar alternativas de carga consolidada, aérea o marítima."
+  }
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="/importar-desde-china/"
+  schema={serviceSchema({
+    name: "Importar desde China a Argentina",
+    description,
+    url: "/importar-desde-china/"
+  })}
+>
+  <section class="bg-white py-16 md:py-24">
+    <Container class="grid gap-10 lg:grid-cols-[1fr_0.75fr] lg:items-center">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.14em] text-ocean">Importaciones desde China</p>
+        <h1 class="mt-4 max-w-4xl font-display text-4xl font-extrabold leading-tight text-ink md:text-6xl">
+          Importar desde China a Argentina con asesoramiento logístico
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-steel">
+          Mercure Internacional te acompaña antes de comprar, durante la coordinación internacional y hasta la entrega final en Argentina.
+        </p>
+        <Button href="/#cotizar" size="lg" class="mt-8">Quiero asesoramiento para importar desde China</Button>
+      </div>
+      <div class="rounded-xl border border-line bg-smoke p-6 shadow-line">
+        <h2 class="font-display text-2xl font-extrabold text-marine">Qué analizamos</h2>
+        <ul class="mt-5 grid gap-3 text-sm leading-7 text-steel">
+          <li>Producto, proveedor y país de origen.</li>
+          <li>Peso, volumen, embalaje y urgencia.</li>
+          <li>Alternativas de carga aérea, marítima o consolidada.</li>
+          <li>Documentación, seguimiento y entrega en destino.</li>
+        </ul>
+      </div>
+    </Container>
+  </section>
+
+  <section class="section-padding bg-smoke">
+    <Container>
+      <SectionHeader
+        eyebrow="Coordinación"
+        title="Logística internacional desde China con más previsibilidad"
+        description="Ordenamos la operación para que puedas comparar alternativas y entender los próximos pasos antes de comprometer una compra internacional."
+      />
+      <div class="mt-10 grid gap-4 md:grid-cols-3">
+        <article class="rounded-lg border border-line bg-white p-5 shadow-line">
+          <h2 class="text-lg font-bold text-ink">Antes de comprar</h2>
+          <p class="mt-3 text-sm leading-7 text-steel">Revisamos información básica del producto, proveedor, volumen y destino para orientar la operación.</p>
+        </article>
+        <article class="rounded-lg border border-line bg-white p-5 shadow-line">
+          <h2 class="text-lg font-bold text-ink">Modalidad de carga</h2>
+          <p class="mt-3 text-sm leading-7 text-steel">Evaluamos si conviene carga aérea, marítima o carga consolidada China Argentina según necesidad real.</p>
+        </article>
+        <article class="rounded-lg border border-line bg-white p-5 shadow-line">
+          <h2 class="text-lg font-bold text-ink">Arribo y entrega</h2>
+          <p class="mt-3 text-sm leading-7 text-steel">Acompañamos documentación, seguimiento y coordinación de entrega final en Argentina.</p>
+        </article>
+      </div>
+    </Container>
+  </section>
+
+  <section class="section-padding bg-white">
+    <Container>
+      <SectionHeader eyebrow="Dudas comunes" title="Preguntas sobre importar desde China" />
+      <div class="mt-8 grid gap-3">
+        {pageFaq.map((item) => (
+          <details class="rounded-lg border border-line bg-white p-5 shadow-line">
+            <summary class="cursor-pointer text-base font-bold text-ink">{item.question}</summary>
+            <p class="mt-3 text-sm leading-7 text-steel">{item.answer}</p>
+          </details>
+        ))}
+      </div>
+      <Button href="/#cotizar" size="lg" class="mt-8">Quiero asesoramiento para importar desde China</Button>
+    </Container>
+  </section>
+</BaseLayout>

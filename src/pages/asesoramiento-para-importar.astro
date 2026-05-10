@@ -1,0 +1,86 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@ui/Button.astro";
+import Container from "@ui/Container.astro";
+import SectionHeader from "@ui/SectionHeader.astro";
+import { serviceSchema } from "@lib/schema";
+
+const title = "Asesoramiento para importar por primera vez | Mercure Internacional";
+const description =
+  "Asesoramiento para empresas, comercios y pymes que quieren empezar a importar en Argentina con análisis de producto, origen, destino y documentación.";
+const pageFaq = [
+  {
+    question: "¿Puedo consultar aunque todavía no haya comprado?",
+    answer:
+      "Sí. De hecho, consultar antes de comprar permite revisar datos clave de la operación y reducir incertidumbre desde el inicio."
+  },
+  {
+    question: "¿Qué datos necesito para una primera orientación?",
+    answer:
+      "Producto, origen, destino, peso o volumen aproximado, urgencia y documentación disponible son datos útiles para iniciar el análisis."
+  }
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="/asesoramiento-para-importar/"
+  schema={serviceSchema({
+    name: "Asesoramiento para importar por primera vez",
+    description,
+    url: "/asesoramiento-para-importar/"
+  })}
+>
+  <section class="bg-white py-16 md:py-24">
+    <Container>
+      <p class="text-sm font-semibold uppercase tracking-[0.14em] text-ocean">Primeras importaciones</p>
+      <h1 class="mt-4 max-w-4xl font-display text-4xl font-extrabold leading-tight text-ink md:text-6xl">
+        Asesoramiento para importar por primera vez
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-steel">
+        Pensado para empresas, comercios y pymes que quieren importar y necesitan entender por dónde empezar, qué información reunir y qué alternativas logísticas evaluar.
+      </p>
+      <Button href="/#cotizar" size="lg" class="mt-8">Quiero recibir asesoramiento</Button>
+    </Container>
+  </section>
+
+  <section class="section-padding bg-smoke">
+    <Container>
+      <SectionHeader
+        eyebrow="Acompañamiento inicial"
+        title="Menos incertidumbre para tomar mejores decisiones"
+        description="Validamos información básica de producto, origen, destino, urgencia y documentación para ayudarte a ordenar la operación antes de avanzar."
+      />
+      <div class="mt-10 grid gap-4 md:grid-cols-3">
+        <article class="rounded-lg border border-line bg-white p-5 shadow-line">
+          <h2 class="text-lg font-bold text-ink">Diagnóstico inicial</h2>
+          <p class="mt-3 text-sm leading-7 text-steel">Revisamos la información disponible y detectamos qué datos faltan para analizar la operación.</p>
+        </article>
+        <article class="rounded-lg border border-line bg-white p-5 shadow-line">
+          <h2 class="text-lg font-bold text-ink">Alternativas logísticas</h2>
+          <p class="mt-3 text-sm leading-7 text-steel">Comparamos opciones posibles según urgencia, volumen, origen, destino y presupuesto disponible.</p>
+        </article>
+        <article class="rounded-lg border border-line bg-white p-5 shadow-line">
+          <h2 class="text-lg font-bold text-ink">Paso a paso</h2>
+          <p class="mt-3 text-sm leading-7 text-steel">Te acompañamos para entender el proceso sin prometer atajos ni simplificar trámites que dependen de cada operación.</p>
+        </article>
+      </div>
+    </Container>
+  </section>
+
+  <section class="section-padding bg-white">
+    <Container>
+      <SectionHeader eyebrow="Dudas comunes" title="Preguntas sobre cómo empezar a importar" />
+      <div class="mt-8 grid gap-3">
+        {pageFaq.map((item) => (
+          <details class="rounded-lg border border-line bg-white p-5 shadow-line">
+            <summary class="cursor-pointer text-base font-bold text-ink">{item.question}</summary>
+            <p class="mt-3 text-sm leading-7 text-steel">{item.answer}</p>
+          </details>
+        ))}
+      </div>
+      <Button href="/#cotizar" size="lg" class="mt-8">Quiero recibir asesoramiento</Button>
+    </Container>
+  </section>
+</BaseLayout>

@@ -43,5 +43,11 @@ export const routes: RouteItem[] = [
     description:
       "Modalidad adecuada para operaciones planificadas, cargas de mayor volumen y esquemas donde la eficiencia logística es central.",
     href: "/carga-maritima-internacional/"
+  },
+  {
+    title: "Asesoramiento para importar",
+    description:
+      "Acompañamiento para empresas, comercios y pymes que quieren empezar a importar y necesitan ordenar la operación desde el inicio.",
+    href: "/asesoramiento-para-importar/"
   }
 ];
