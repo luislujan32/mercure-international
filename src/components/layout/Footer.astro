@@ -8,10 +8,14 @@ const contactItems = [
   { label: "Teléfono", value: siteConfig.phone },
   { label: "Email", value: siteConfig.email }
 ].filter((item) => item.value && !isPlaceholder(item.value));
+const hasContactItems = contactItems.length > 0;
+const footerGridClass = hasContactItems
+  ? "grid gap-10 py-12 md:grid-cols-[1.2fr_0.8fr_0.8fr] md:py-16"
+  : "grid gap-10 py-12 md:grid-cols-[1.2fr_0.8fr] md:py-16";
 ---
 
 <footer class="border-t border-line bg-white">
-  <Container class="grid gap-10 py-12 md:grid-cols-[1.2fr_0.8fr_0.8fr] md:py-16">
+  <Container class={footerGridClass}>
     <div>
       <p class="font-display text-xl font-extrabold text-marine">{siteConfig.name}</p>
       <p class="mt-4 max-w-md text-sm leading-7 text-steel">{siteConfig.description}</p>
@@ -35,10 +39,10 @@ const contactItems = [
       </ul>
     </nav>
 
-    <div>
-      <p class="text-sm font-bold uppercase tracking-[0.12em] text-graphite">Contacto</p>
-      {
-        contactItems.length > 0 ? (
+    {
+      hasContactItems && (
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.12em] text-graphite">Contacto</p>
           <ul class="mt-4 grid gap-3">
             {contactItems.map((item) => (
               <li class="text-sm text-steel">
@@ -46,13 +50,9 @@ const contactItems = [
               </li>
             ))}
           </ul>
-        ) : (
-          <p class="mt-4 text-sm leading-7 text-steel">
-            Los datos de contacto se incorporarán cuando estén confirmados.
-          </p>
-        )
-      }
-    </div>
+        </div>
+      )
+    }
   </Container>
 
   <div class="border-t border-line py-5">

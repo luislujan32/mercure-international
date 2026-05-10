@@ -19,16 +19,16 @@ export const siteConfig = {
     }
   ],
   socialLinks: {
-    linkedin: "https://www.linkedin.com/company/mercure-srl",
-    instagram: "https://www.instagram.com/mercure",
-    facebook: "https://www.facebook.com/mercure"
+    linkedin: "",
+    instagram: "",
+    facebook: ""
   },
   mainNavigation: [
     { label: "Servicios", href: "/#servicios" },
     { label: "Proceso", href: "/#proceso" },
     { label: "Rutas", href: "/#rutas" },
-    { label: "FAQ", href: "/#faq" },
-    { label: "Cotizar", href: "/#pre-cotizacion" }
+    { label: "FAQ", href: "/#preguntas-frecuentes" },
+    { label: "Cotizar", href: "/#cotizar" }
   ],
   footerNavigation: [
     { label: "Importar desde China", href: "/importar-desde-china/" },

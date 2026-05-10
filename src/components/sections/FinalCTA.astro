@@ -2,6 +2,11 @@
 import Container from "@ui/Container.astro";
 import QuoteForm from "@sections/QuoteForm";
 import { siteConfig } from "@config/site";
+import { isRealWhatsAppNumber } from "@lib/whatsapp";
+
+const formWhatsAppNumber = isRealWhatsAppNumber(siteConfig.whatsappNumber)
+  ? siteConfig.whatsappNumber
+  : "";
 ---
 
 <section id="cotizar" class="section-padding bg-white">
@@ -22,7 +27,7 @@ import { siteConfig } from "@config/site";
             producto, el origen, el destino y el nivel de urgencia.
           </p>
         </div>
-        <QuoteForm client:visible whatsappNumber={siteConfig.whatsappNumber} />
+        <QuoteForm client:visible whatsappNumber={formWhatsAppNumber} />
       </div>
     </div>
   </Container>

@@ -21,7 +21,7 @@ function cleanObject<T extends JsonLd>(schema: T): T {
 }
 
 function hasRealValue(value: string): boolean {
-  return !/a definir|x{4,}/i.test(value);
+  return value.trim().length > 0 && !/a definir|x{4,}/i.test(value);
 }
 
 export function organizationSchema(): JsonLd {
@@ -45,7 +45,7 @@ export function organizationSchema(): JsonLd {
           addressCountry: address.addressCountry
         }
       : undefined,
-    sameAs: Object.values(siteConfig.socialLinks).filter(Boolean)
+    sameAs: Object.values(siteConfig.socialLinks).filter((link) => hasRealValue(link))
   });
 }
 
