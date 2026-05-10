@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mercure Internacional">
+  <rect width="64" height="64" rx="12" fill="#083b5c"/>
+  <path d="M14 42V18h7l11 14 11-14h7v24h-7V29L34 42h-4L21 29v13h-7Z" fill="#ffffff"/>
+  <path d="M14 49h36v4H14z" fill="#d99a22"/>
+</svg>
