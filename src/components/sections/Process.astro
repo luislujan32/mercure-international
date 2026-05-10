@@ -1,0 +1,32 @@
+---
+import Container from "@ui/Container.astro";
+import SectionHeader from "@ui/SectionHeader.astro";
+import { processSteps } from "@data/process";
+---
+
+<section id="proceso" class="section-padding bg-smoke">
+  <Container>
+    <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+      <SectionHeader
+        eyebrow="Proceso"
+        title="Acompañamiento desde antes de comprar"
+        description="Ordenamos la operación desde la consulta inicial para que tengas más claridad antes de comprometer una compra internacional."
+      />
+      <div class="grid gap-4">
+        {
+          processSteps.map((step) => (
+            <article class="grid gap-4 rounded-lg border border-line bg-white p-5 shadow-line sm:grid-cols-[4rem_1fr]">
+              <div class="flex size-12 items-center justify-center rounded-md bg-marine font-display text-xl font-extrabold text-white">
+                {step.step}
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-ink">{step.title}</h3>
+                <p class="mt-2 text-sm leading-7 text-steel">{step.description}</p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,48 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Benefits from "@sections/Benefits.astro";
+import FAQ from "@sections/FAQ.astro";
+import FinalCTA from "@sections/FinalCTA.astro";
+import Hero from "@sections/Hero.astro";
+import Process from "@sections/Process.astro";
+import Routes from "@sections/Routes.astro";
+import Services from "@sections/Services.astro";
+import TargetAudience from "@sections/TargetAudience.astro";
+import TrustStats from "@sections/TrustStats.astro";
+import { faqItems } from "@data/faq";
+import { faqPageSchema, organizationSchema, serviceSchema, websiteSchema } from "@lib/schema";
+
+type JsonLd = Record<string, unknown>;
+
+const title = "Mercure Internacional | Logística internacional para importar a Argentina";
+const description =
+  "Asesoramiento y coordinación de logística internacional para empresas, pymes y comercios que quieren importar productos hacia Argentina con respaldo operativo.";
+
+const schemas = [
+  organizationSchema(),
+  websiteSchema(),
+  serviceSchema({
+    name: "Logística internacional para importaciones",
+    description,
+    url: "/"
+  }),
+  faqPageSchema(faqItems)
+].filter((schema): schema is JsonLd => Boolean(schema));
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="/"
+  schema={schemas}
+>
+  <Hero />
+  <TrustStats />
+  <Services />
+  <Process />
+  <Benefits />
+  <TargetAudience />
+  <Routes />
+  <FAQ />
+  <FinalCTA />
+</BaseLayout>

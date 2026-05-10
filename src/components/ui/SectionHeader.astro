@@ -1,0 +1,33 @@
+---
+type Props = {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  align?: "left" | "center";
+  class?: string;
+};
+
+const {
+  eyebrow,
+  title,
+  description,
+  align = "left",
+  class: className = ""
+} = Astro.props;
+
+const isCentered = align === "center";
+---
+
+<div class:list={[isCentered && "mx-auto text-center", "max-w-3xl", className]}>
+  {eyebrow && <p class="text-sm font-semibold uppercase tracking-[0.14em] text-ocean">{eyebrow}</p>}
+  <h2 class:list={["font-display text-3xl font-extrabold text-ink md:text-5xl", eyebrow && "mt-3"]}>
+    {title}
+  </h2>
+  {
+    description && (
+      <p class:list={["mt-5 text-base leading-8 text-steel md:text-lg", isCentered && "mx-auto max-w-2xl"]}>
+        {description}
+      </p>
+    )
+  }
+</div>

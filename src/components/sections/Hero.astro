@@ -1,0 +1,58 @@
+---
+import Button from "@ui/Button.astro";
+import Container from "@ui/Container.astro";
+
+const operationSteps = [
+  "Origen internacional",
+  "Documentación",
+  "Carga en tránsito",
+  "Arribo a Argentina",
+  "Entrega final"
+];
+---
+
+<section class="relative overflow-hidden border-b border-line bg-white">
+  <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-mist to-transparent"></div>
+  <Container class="relative grid gap-12 py-16 md:grid-cols-[1.05fr_0.95fr] md:items-center md:py-24">
+    <div>
+      <p class="inline-flex rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold text-ocean shadow-line">
+        Logística internacional para empresas
+      </p>
+      <h1 class="mt-6 max-w-4xl font-display text-4xl font-extrabold leading-tight text-ink md:text-6xl">
+        Importá productos desde cualquier parte del mundo con respaldo logístico
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-8 text-steel">
+        Te acompañamos con asesoramiento, coordinación internacional, seguimiento claro y
+        entrega en Argentina para que tu operación avance con más previsibilidad.
+      </p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <Button href="#cotizar" size="lg">Solicitar asesoramiento</Button>
+        <Button href="#proceso" variant="secondary" size="lg">Ver cómo funciona</Button>
+      </div>
+      <p class="mt-8 max-w-xl border-l-4 border-signal pl-4 text-sm leading-7 text-graphite">
+        Asesoramiento de punta a punta para reducir incertidumbre antes, durante y después
+        de la operación.
+      </p>
+    </div>
+
+    <div class="rounded-xl border border-line bg-smoke p-4 shadow-premium md:p-6" aria-label="Resumen visual del proceso logístico">
+      <div class="rounded-lg bg-marine p-5 text-white">
+        <p class="text-sm font-semibold text-gold">Operación internacional</p>
+        <p class="mt-2 font-display text-2xl font-extrabold">Coordinación punta a punta</p>
+      </div>
+      <div class="mt-4 grid gap-3">
+        {
+          operationSteps.map((step, index) => (
+            <div class="flex items-center gap-4 rounded-lg border border-line bg-white p-4 shadow-line">
+              <span class="flex size-9 shrink-0 items-center justify-center rounded-md bg-mist text-sm font-extrabold text-marine">
+                {index + 1}
+              </span>
+              <span class="text-sm font-semibold text-graphite">{step}</span>
+              <span class="ml-auto h-2 w-16 rounded-full bg-gradient-to-r from-ocean to-signal"></span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </Container>
+</section>

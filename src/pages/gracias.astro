@@ -1,0 +1,25 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const title = "Gracias por tu consulta | Mercure Internacional";
+const description =
+  "Recibimos tu consulta. El equipo de Mercure Internacional se contactará para avanzar con la pre-cotización.";
+---
+
+<BaseLayout title={title} description={description} canonical="/gracias/" noindex>
+  <section class="container-page section-padding">
+    <h1 class="max-w-3xl font-display text-4xl font-extrabold text-ink md:text-5xl">
+      Gracias por tu consulta
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg leading-8 text-steel">
+      El equipo de Mercure Internacional se contactará para revisar la operación y avanzar
+      con la pre-cotización.
+    </p>
+    <a
+      href="/"
+      class="mt-8 inline-flex rounded-md border border-line bg-white px-5 py-3 text-sm font-semibold text-marine shadow-line transition hover:border-ocean"
+    >
+      Volver al inicio
+    </a>
+  </section>
+</BaseLayout>

@@ -1,0 +1,63 @@
+---
+import { siteConfig } from "@config/site";
+import Container from "@ui/Container.astro";
+
+const year = new Date().getFullYear();
+const isPlaceholder = (value: string) => /a definir|x{4,}/i.test(value);
+const contactItems = [
+  { label: "Teléfono", value: siteConfig.phone },
+  { label: "Email", value: siteConfig.email }
+].filter((item) => item.value && !isPlaceholder(item.value));
+---
+
+<footer class="border-t border-line bg-white">
+  <Container class="grid gap-10 py-12 md:grid-cols-[1.2fr_0.8fr_0.8fr] md:py-16">
+    <div>
+      <p class="font-display text-xl font-extrabold text-marine">{siteConfig.name}</p>
+      <p class="mt-4 max-w-md text-sm leading-7 text-steel">{siteConfig.description}</p>
+      <p class="mt-5 text-sm leading-7 text-steel">
+        Mercure Internacional es una unidad de soluciones logísticas de {siteConfig.companyName}.
+      </p>
+    </div>
+
+    <nav aria-label="Navegación de pie de página">
+      <p class="text-sm font-bold uppercase tracking-[0.12em] text-graphite">Servicios</p>
+      <ul class="mt-4 grid gap-3">
+        {
+          siteConfig.footerNavigation.map((item) => (
+            <li>
+              <a class="text-sm font-medium text-steel transition hover:text-marine" href={item.href}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div>
+      <p class="text-sm font-bold uppercase tracking-[0.12em] text-graphite">Contacto</p>
+      {
+        contactItems.length > 0 ? (
+          <ul class="mt-4 grid gap-3">
+            {contactItems.map((item) => (
+              <li class="text-sm text-steel">
+                <span class="font-semibold text-graphite">{item.label}:</span> {item.value}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="mt-4 text-sm leading-7 text-steel">
+            Los datos de contacto se incorporarán cuando estén confirmados.
+          </p>
+        )
+      }
+    </div>
+  </Container>
+
+  <div class="border-t border-line py-5">
+    <Container class="text-sm text-steel">
+      © {year} {siteConfig.companyName}. Todos los derechos reservados.
+    </Container>
+  </div>
+</footer>

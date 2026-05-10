@@ -1,0 +1,29 @@
+---
+import Container from "@ui/Container.astro";
+import SectionHeader from "@ui/SectionHeader.astro";
+import { stats } from "@data/stats";
+
+const sourceLabel = stats[0]?.sourceLabel;
+---
+
+<section class="bg-smoke py-12">
+  <Container>
+    <SectionHeader
+      eyebrow="Respaldo operativo"
+      title="Experiencia logística aplicada a nuevas operaciones internacionales"
+      description="Mercure Internacional integra trayectoria institucional, coordinación y mirada operativa para acompañar importaciones hacia Argentina."
+    />
+    <div class="mt-8 grid gap-4 md:grid-cols-3">
+      {
+        stats.map((stat) => (
+          <article class="rounded-lg border border-line bg-white p-6 shadow-line">
+            <p class="font-display text-4xl font-extrabold text-marine">{stat.value}</p>
+            <h3 class="mt-2 text-base font-bold text-ink">{stat.label}</h3>
+            <p class="mt-3 text-sm leading-7 text-steel">{stat.description}</p>
+          </article>
+        ))
+      }
+    </div>
+    {sourceLabel && <p class="mt-4 text-xs leading-6 text-steel">{sourceLabel}.</p>}
+  </Container>
+</section>

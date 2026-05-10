@@ -1,0 +1,36 @@
+---
+import Container from "@ui/Container.astro";
+import SectionHeader from "@ui/SectionHeader.astro";
+import { routes } from "@data/routes";
+---
+
+<section id="rutas" class="section-padding bg-white">
+  <Container>
+    <SectionHeader
+      eyebrow="Rutas"
+      title="Rutas y soluciones frecuentes"
+      description="Acompañamos importaciones desde distintos orígenes y modalidades, con foco en operaciones hacia Argentina y empresas del NOA."
+    />
+    <div class="mt-10 grid gap-4 md:grid-cols-2">
+      {
+        routes.map((route) => {
+          const content = (
+            <>
+              <h3 class="text-lg font-bold text-ink">{route.title}</h3>
+              <p class="mt-3 text-sm leading-7 text-steel">{route.description}</p>
+              {route.href && <span class="mt-4 inline-block text-sm font-bold text-ocean">Ver solución</span>}
+            </>
+          );
+
+          return route.href ? (
+            <a href={route.href} class="rounded-lg border border-line bg-white p-5 shadow-line transition hover:-translate-y-1 hover:border-ocean hover:shadow-soft">
+              {content}
+            </a>
+          ) : (
+            <article class="rounded-lg border border-line bg-smoke p-5">{content}</article>
+          );
+        })
+      }
+    </div>
+  </Container>
+</section>

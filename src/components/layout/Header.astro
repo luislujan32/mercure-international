@@ -1,0 +1,48 @@
+---
+import { siteConfig } from "@config/site";
+import Button from "@ui/Button.astro";
+import Container from "@ui/Container.astro";
+---
+
+<header class="sticky top-0 z-40 border-b border-line/70 bg-white/88 backdrop-blur-xl">
+  <Container class="flex min-h-20 items-center justify-between gap-5">
+    <a href="/" class="flex items-center gap-3 font-display text-lg font-extrabold text-marine" aria-label="Ir al inicio">
+      <span class="flex size-10 items-center justify-center rounded-md bg-marine text-sm font-black text-white shadow-soft">
+        MI
+      </span>
+      <span>{siteConfig.name}</span>
+    </a>
+
+    <nav class="hidden items-center gap-7 md:flex" aria-label="Navegación principal">
+      {
+        siteConfig.mainNavigation.map((item) => (
+          <a class="text-sm font-semibold text-steel transition hover:text-marine" href={item.href}>
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="hidden md:block">
+      <Button href="/#cotizar" size="sm">Solicitar asesoramiento</Button>
+    </div>
+
+    <details class="group relative md:hidden">
+      <summary class="flex min-h-11 cursor-pointer list-none items-center rounded-md border border-line bg-white px-4 text-sm font-semibold text-marine shadow-line marker:hidden">
+        Menú
+      </summary>
+      <div class="absolute right-0 top-14 w-72 rounded-lg border border-line bg-white p-3 shadow-premium">
+        <nav class="grid gap-1" aria-label="Navegación principal móvil">
+          {
+            siteConfig.mainNavigation.map((item) => (
+              <a class="rounded-md px-3 py-2.5 text-sm font-semibold text-steel transition hover:bg-mist hover:text-marine" href={item.href}>
+                {item.label}
+              </a>
+            ))
+          }
+          <Button href="/#cotizar" size="sm" class="mt-2 w-full">Solicitar asesoramiento</Button>
+        </nav>
+      </div>
+    </details>
+  </Container>
+</header>
