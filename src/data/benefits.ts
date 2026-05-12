@@ -24,7 +24,7 @@ export const benefits: BenefitItem[] = [
   {
     title: "Red logística nacional",
     description:
-      "Integramos la operación internacional con la capacidad de distribución nacional de Mercure en Argentina."
+      "Integramos la operación internacional con la capacidad de distribución nacional de Mercure Global en Argentina."
   },
   {
     title: "Comunicación clara",

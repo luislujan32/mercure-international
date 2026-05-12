@@ -53,7 +53,7 @@ export const services: ServiceItem[] = [
   {
     title: "Entrega nacional coordinada",
     description:
-      "Coordinamos la entrega final en Argentina aprovechando la experiencia logística y la red nacional de Mercure.",
+      "Coordinamos la entrega final en Argentina aprovechando la experiencia logística y la red nacional de Mercure Global.",
     icon: "truck",
     keywords: ["entrega nacional", "logística nacional", "distribución en Argentina"]
   }

@@ -14,23 +14,25 @@ const footerGridClass = hasContactItems
   : "grid gap-10 py-12 md:grid-cols-[1.2fr_0.8fr] md:py-16";
 ---
 
-<footer class="border-t border-line bg-white">
+<footer class="border-t border-white/10 bg-marine text-white">
   <Container class={footerGridClass}>
     <div>
-      <p class="font-display text-xl font-extrabold text-marine">{siteConfig.name}</p>
-      <p class="mt-4 max-w-md text-sm leading-7 text-steel">{siteConfig.description}</p>
-      <p class="mt-5 text-sm leading-7 text-steel">
-        Mercure Internacional es una unidad de soluciones logísticas de {siteConfig.companyName}.
+      <img src={siteConfig.logo} alt={siteConfig.name} class="h-24 w-auto rounded-md object-contain" loading="lazy" />
+      <p class="mt-4 font-display text-xl font-extrabold text-white">{siteConfig.name}</p>
+      <p class="mt-1 text-sm font-semibold text-cyan">{siteConfig.brandClaim}</p>
+      <p class="mt-4 max-w-md text-sm leading-7 text-mist">{siteConfig.description}</p>
+      <p class="mt-5 text-sm leading-7 text-mist">
+        Mercure Global es la marca de soluciones logísticas internacionales de {siteConfig.companyName}.
       </p>
     </div>
 
     <nav aria-label="Navegación de pie de página">
-      <p class="text-sm font-bold uppercase tracking-[0.12em] text-graphite">Servicios</p>
+      <p class="text-sm font-bold uppercase tracking-[0.12em] text-gold">Servicios</p>
       <ul class="mt-4 grid gap-3">
         {
           siteConfig.footerNavigation.map((item) => (
             <li>
-              <a class="text-sm font-medium text-steel transition hover:text-marine" href={item.href}>
+              <a class="text-sm font-medium text-mist transition hover:text-cyan" href={item.href}>
                 {item.label}
               </a>
             </li>
@@ -42,11 +44,11 @@ const footerGridClass = hasContactItems
     {
       hasContactItems && (
         <div>
-          <p class="text-sm font-bold uppercase tracking-[0.12em] text-graphite">Contacto</p>
+          <p class="text-sm font-bold uppercase tracking-[0.12em] text-gold">Contacto</p>
           <ul class="mt-4 grid gap-3">
             {contactItems.map((item) => (
-              <li class="text-sm text-steel">
-                <span class="font-semibold text-graphite">{item.label}:</span> {item.value}
+              <li class="text-sm text-mist">
+                <span class="font-semibold text-white">{item.label}:</span> {item.value}
               </li>
             ))}
           </ul>
@@ -55,8 +57,8 @@ const footerGridClass = hasContactItems
     }
   </Container>
 
-  <div class="border-t border-line py-5">
-    <Container class="text-sm text-steel">
+  <div class="border-t border-white/10 py-5">
+    <Container class="text-sm text-mist">
       {`© ${year} ${siteConfig.companyName}. Todos los derechos reservados.`}
     </Container>
   </div>

@@ -1,6 +1,6 @@
 import type { StatItem } from "@/types/site";
 
-const sourceLabel = "Dato institucional sujeto a validación final con Mercure";
+const sourceLabel = "Dato institucional sujeto a validación final con Mercure Global";
 
 export const stats: StatItem[] = [
   {
@@ -14,14 +14,14 @@ export const stats: StatItem[] = [
     value: "500+",
     label: "clientes satisfechos",
     description:
-      "Empresas y clientes que confiaron en Mercure para resolver necesidades logísticas.",
+      "Empresas y clientes que confiaron en Mercure Global para resolver necesidades logísticas.",
     sourceLabel
   },
   {
     value: "5.000+",
     label: "envíos realizados",
     description:
-      "Operaciones logísticas gestionadas por Mercure como parte de su experiencia institucional.",
+      "Operaciones logísticas gestionadas por Mercure Global como parte de su experiencia institucional.",
     sourceLabel
   }
 ];

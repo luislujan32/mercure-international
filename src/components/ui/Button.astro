@@ -1,7 +1,7 @@
 ---
 type Props = {
   href?: string;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "inverse" | "ghost";
   size?: "sm" | "md" | "lg";
   class?: string;
   target?: string;
@@ -18,11 +18,12 @@ const {
 } = Astro.props;
 
 const baseClasses =
-  "inline-flex items-center justify-center rounded-md font-semibold transition focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-signal disabled:pointer-events-none disabled:opacity-60";
+  "inline-flex items-center justify-center rounded-md font-semibold transition focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-cyan disabled:pointer-events-none disabled:opacity-60";
 
 const variantClasses = {
-  primary: "bg-marine text-white shadow-soft hover:bg-harbor",
-  secondary: "border border-line bg-white text-marine shadow-line hover:border-ocean hover:bg-mist",
+  primary: "bg-cyan text-marine shadow-soft hover:bg-aqua",
+  secondary: "border border-cyan/35 bg-white/95 text-marine shadow-line hover:border-cyan hover:bg-mist",
+  inverse: "border border-white/25 bg-white/10 text-white shadow-line hover:bg-white/15",
   ghost: "text-marine hover:bg-mist"
 };
 

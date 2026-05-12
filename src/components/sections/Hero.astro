@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon/components";
 import Button from "@ui/Button.astro";
 import Container from "@ui/Container.astro";
+import { siteConfig } from "@config/site";
 
 const operationSteps = [
   { label: "Origen internacional", icon: "lucide:globe" },
@@ -12,54 +13,60 @@ const operationSteps = [
 ];
 ---
 
-<section class="relative overflow-hidden border-b border-line bg-white">
-  <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-mist to-transparent"></div>
+<section class="relative overflow-hidden border-b border-white/10 bg-marine text-white">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(16,215,255,0.2),transparent_24rem),radial-gradient(circle_at_78%_16%,rgba(217,154,34,0.18),transparent_18rem),linear-gradient(135deg,#031225_0%,#04162f_52%,#06265b_100%)]"></div>
+  <div class="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(233,237,243,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(233,237,243,0.08)_1px,transparent_1px)] [background-size:72px_72px]"></div>
+  <div class="absolute -right-32 top-10 size-[34rem] rounded-full border border-cyan/20"></div>
+  <div class="absolute -right-12 top-28 size-[22rem] rounded-full border border-signal/25"></div>
+  <div class="absolute left-1/3 top-24 h-px w-1/2 rotate-[-14deg] bg-gradient-to-r from-transparent via-cyan/45 to-transparent"></div>
   <Container class="relative grid gap-12 py-16 md:grid-cols-[1.05fr_0.95fr] md:items-center md:py-24">
     <div>
-      <p class="inline-flex rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold text-ocean shadow-line">
-        Logística internacional para empresas
+      <p class="inline-flex rounded-full border border-cyan/25 bg-white/8 px-4 py-2 text-sm font-semibold text-cyan shadow-line">
+        {siteConfig.name} · {siteConfig.brandClaim}
       </p>
-      <h1 class="mt-6 max-w-4xl font-display text-4xl font-extrabold leading-tight text-ink md:text-6xl">
-        Importá productos desde cualquier parte del mundo con respaldo logístico
+      <h1 class="mt-6 max-w-4xl font-display text-4xl font-extrabold leading-tight text-white md:text-6xl">
+        Importá productos desde cualquier parte del mundo con respaldo global
       </h1>
-      <p class="mt-6 max-w-2xl text-lg leading-8 text-steel">
-        Te acompañamos con asesoramiento, coordinación internacional, seguimiento claro y
-        entrega en Argentina para que tu operación avance con más previsibilidad.
+      <p class="mt-6 max-w-2xl text-lg leading-8 text-mist">
+        Mercure Global te acompaña con asesoramiento, coordinación internacional, trazabilidad
+        y entrega en Argentina para que tu operación avance con seguridad y transparencia.
       </p>
       <div class="mt-8 flex flex-col gap-3 sm:flex-row">
         <Button href="#cotizar" size="lg">Solicitar asesoramiento</Button>
-        <Button href="#proceso" variant="secondary" size="lg">Ver cómo funciona</Button>
+        <Button href="#proceso" variant="inverse" size="lg">Ver cómo funciona</Button>
       </div>
-      <p class="mt-8 max-w-xl border-l-4 border-signal pl-4 text-sm leading-7 text-graphite">
+      <p class="mt-8 max-w-xl border-l-4 border-signal pl-4 text-sm leading-7 text-mist">
         Asesoramiento de punta a punta para reducir incertidumbre antes, durante y después
         de la operación.
       </p>
     </div>
 
-    <div class="rounded-xl border border-line bg-smoke p-4 shadow-premium md:p-6" aria-label="Resumen visual del proceso logístico">
-      <div class="relative overflow-hidden rounded-lg bg-marine p-5 text-white">
-        <div class="absolute right-5 top-5 flex size-11 items-center justify-center rounded-md bg-white/10 text-gold">
+    <div class="rounded-xl border border-white/10 bg-white/8 p-4 shadow-premium backdrop-blur md:p-6" aria-label="Resumen visual del proceso logístico">
+      <div class="relative overflow-hidden rounded-lg border border-cyan/20 bg-harbor p-5 text-white">
+        <div class="absolute -right-20 -top-20 size-48 rounded-full border border-cyan/20"></div>
+        <div class="absolute right-5 top-5 flex size-11 items-center justify-center rounded-md bg-white/10 text-cyan">
           <Icon name="lucide:route" class="size-6" aria-hidden="true" />
         </div>
-        <p class="text-sm font-semibold text-gold">Operación internacional</p>
+        <img src={siteConfig.logo} alt={siteConfig.name} class="h-16 w-auto rounded-md object-contain" loading="eager" />
+        <p class="mt-5 text-sm font-semibold text-gold">Operación internacional</p>
         <p class="mt-2 max-w-xs font-display text-2xl font-extrabold">Coordinación punta a punta</p>
         <div class="mt-5 grid grid-cols-3 gap-2 text-xs font-semibold text-mist">
-          <span class="rounded-md bg-white/10 px-3 py-2">Origen</span>
-          <span class="rounded-md bg-white/10 px-3 py-2">Tránsito</span>
-          <span class="rounded-md bg-white/10 px-3 py-2">Destino</span>
+          <span class="rounded-md border border-white/10 bg-white/10 px-3 py-2">Origen</span>
+          <span class="rounded-md border border-white/10 bg-white/10 px-3 py-2">Tránsito</span>
+          <span class="rounded-md border border-white/10 bg-white/10 px-3 py-2">Destino</span>
         </div>
       </div>
       <div class="mt-4 grid gap-3">
         {
           operationSteps.map((step, index) => (
-            <div class="flex items-center gap-4 rounded-lg border border-line bg-white p-4 shadow-line">
-              <span class="flex size-10 shrink-0 items-center justify-center rounded-md bg-mist text-marine">
+            <div class="flex items-center gap-4 rounded-lg border border-white/10 bg-white/95 p-4 shadow-line">
+              <span class="flex size-10 shrink-0 items-center justify-center rounded-md bg-marine text-cyan">
                 <Icon name={step.icon} class="size-5" aria-hidden="true" />
               </span>
               <span class="text-sm font-semibold text-graphite">{step.label}</span>
               <span class="ml-auto flex items-center gap-2" aria-hidden="true">
                 <span class="hidden h-px w-10 bg-line sm:block"></span>
-                <span class="flex size-7 items-center justify-center rounded-full bg-marine text-xs font-extrabold text-white">
+                <span class="flex size-7 items-center justify-center rounded-full bg-ocean text-xs font-extrabold text-white">
                   {index + 1}
                 </span>
               </span>

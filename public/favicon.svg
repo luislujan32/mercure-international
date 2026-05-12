@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mercure Internacional">
-  <rect width="64" height="64" rx="12" fill="#083b5c"/>
-  <path d="M14 42V18h7l11 14 11-14h7v24h-7V29L34 42h-4L21 29v13h-7Z" fill="#ffffff"/>
-  <path d="M14 49h36v4H14z" fill="#d99a22"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mercure Global">
+  <rect width="64" height="64" rx="12" fill="#031225"/>
+  <path d="M12 42c8-16 18-24 31-24 4 0 7 1 9 2" fill="none" stroke="#10d7ff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M16 47c9-11 18-16 29-16 3 0 5 0 7 1" fill="none" stroke="#d99a22" stroke-width="3" stroke-linecap="round"/>
+  <text x="32" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#e9edf3">MG</text>
 </svg>

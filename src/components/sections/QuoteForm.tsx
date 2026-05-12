@@ -99,7 +99,7 @@ export default function QuoteForm({ whatsappNumber }: QuoteFormProps) {
   }
 
   const inputClass =
-    "mt-2 min-h-12 w-full rounded-md border border-line bg-white px-4 py-3 text-sm text-ink shadow-line outline-none transition placeholder:text-steel/70 focus:border-ocean focus:ring-4 focus:ring-ocean/15 aria-[invalid=true]:border-danger aria-[invalid=true]:focus:ring-danger/15";
+    "mt-2 min-h-12 w-full rounded-md border border-line bg-white px-4 py-3 text-sm text-ink shadow-line outline-none transition placeholder:text-steel/70 focus:border-cyan focus:ring-4 focus:ring-cyan/20 aria-[invalid=true]:border-danger aria-[invalid=true]:focus:ring-danger/15";
   const labelClass = "text-sm font-semibold text-graphite";
   const errorClass = "mt-2 text-sm font-semibold text-danger";
 
@@ -239,7 +239,7 @@ export default function QuoteForm({ whatsappNumber }: QuoteFormProps) {
       <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
         <button
           type="submit"
-          className="inline-flex min-h-12 items-center justify-center rounded-md bg-marine px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-harbor focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-signal"
+          className="inline-flex min-h-12 items-center justify-center rounded-md bg-cyan px-6 py-3 text-sm font-semibold text-marine shadow-soft transition hover:bg-aqua focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-cyan"
         >
           Preparar consulta
         </button>
@@ -253,7 +253,7 @@ export default function QuoteForm({ whatsappNumber }: QuoteFormProps) {
           <div className="rounded-lg border border-success/30 bg-success/10 p-4 text-sm leading-7 text-success">
             {hasRealWhatsApp
               ? "Consulta preparada. Se abrirá WhatsApp con el mensaje listo para enviar."
-              : "Consulta preparada. Cuando se configure el WhatsApp de Mercure, este formulario enviará el mensaje automáticamente."}
+              : "Consulta preparada. Cuando se configure el WhatsApp de Mercure Global, este formulario enviará el mensaje automáticamente."}
           </div>
         )}
       </div>

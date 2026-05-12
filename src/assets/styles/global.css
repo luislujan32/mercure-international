@@ -5,15 +5,17 @@
 @theme {
   --color-ink: #111827;
   --color-graphite: #243244;
-  --color-steel: #5b6678;
-  --color-smoke: #f6f8fb;
-  --color-mist: #e9f0f5;
-  --color-line: #d8e1ea;
-  --color-marine: #083b5c;
-  --color-ocean: #0f6b8f;
-  --color-harbor: #0b4f71;
+  --color-steel: #5f6f84;
+  --color-smoke: #f4f7fb;
+  --color-mist: #e9edf3;
+  --color-line: #d8e2ee;
+  --color-marine: #031225;
+  --color-ocean: #0b4fd8;
+  --color-harbor: #04162f;
+  --color-cyan: #10d7ff;
+  --color-aqua: #18bfe8;
   --color-signal: #d99a22;
-  --color-gold: #f0bd4f;
+  --color-gold: #f1c15f;
   --color-success: #176b53;
   --color-danger: #b42318;
 
@@ -25,9 +27,9 @@
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
 
-  --shadow-soft: 0 18px 50px rgba(17, 24, 39, 0.1);
-  --shadow-premium: 0 24px 80px rgba(8, 59, 92, 0.16);
-  --shadow-line: 0 0 0 1px rgba(216, 225, 234, 0.9);
+  --shadow-soft: 0 18px 50px rgba(3, 18, 37, 0.12);
+  --shadow-premium: 0 28px 90px rgba(3, 18, 37, 0.24);
+  --shadow-line: 0 0 0 1px rgba(216, 226, 238, 0.9);
 }
 
 @layer base {
@@ -49,13 +51,13 @@
     font-family: var(--font-sans);
     color: var(--color-ink);
     background:
-      radial-gradient(circle at top left, rgba(15, 107, 143, 0.08), transparent 34rem),
+      radial-gradient(circle at top left, rgba(16, 215, 255, 0.1), transparent 34rem),
       linear-gradient(180deg, #ffffff 0%, var(--color-smoke) 100%);
   }
 
   ::selection {
-    color: #ffffff;
-    background: var(--color-ocean);
+    color: var(--color-marine);
+    background: var(--color-cyan);
   }
 
   :focus-visible {

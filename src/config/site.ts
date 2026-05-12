@@ -1,11 +1,14 @@
 export const siteConfig = {
-  name: "Mercure Internacional",
+  name: "Mercure Global",
+  brandClaim: "International Logistics Solutions",
+  brandClaimEs: "Soluciones logísticas internacionales",
   companyName: "Mercure SRL",
   description:
-    "Unidad de logística internacional de Mercure SRL para empresas, pymes y comercios que necesitan coordinar importaciones hacia Argentina.",
+    "Soluciones logísticas internacionales de Mercure SRL para empresas, pymes y comercios que necesitan coordinar importaciones hacia Argentina.",
   url: import.meta.env.SITE_URL ?? "https://www.mercuresrl.com",
   locale: "es_AR",
   defaultOgImage: "/og-image.jpg",
+  logo: "/images/mercure-global-logo.svg",
   whatsappNumber: "549XXXXXXXXXX",
   phone: "Teléfono a definir",
   email: "Email a definir",

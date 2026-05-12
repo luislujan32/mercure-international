@@ -4,9 +4,9 @@ import Button from "@ui/Button.astro";
 import { siteConfig } from "@config/site";
 import { buildWhatsAppUrl, isRealWhatsAppNumber } from "@lib/whatsapp";
 
-const title = "Gracias por tu consulta | Mercure Internacional";
+const title = "Gracias por tu consulta | Mercure Global";
 const description =
-  "Tu consulta fue preparada para que el equipo de Mercure Internacional pueda orientarte sobre la operación logística.";
+  "Tu consulta fue preparada para que el equipo de Mercure Global pueda orientarte sobre la operación logística.";
 const hasRealWhatsApp = isRealWhatsAppNumber(siteConfig.whatsappNumber);
 const whatsappHref = hasRealWhatsApp
   ? buildWhatsAppUrl(
@@ -24,7 +24,7 @@ const whatsappHref = hasRealWhatsApp
         Gracias por tu consulta
       </h1>
       <p class="mt-6 text-lg leading-8 text-steel">
-        Tu consulta fue preparada para que el equipo de Mercure Internacional pueda revisar
+        Tu consulta fue preparada para que el equipo de Mercure Global pueda revisar
         la operación y orientarte sobre los próximos pasos.
       </p>
       <p class="mt-4 text-base leading-8 text-steel">

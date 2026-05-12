@@ -30,10 +30,11 @@ export function organizationSchema(): JsonLd {
   return cleanObject({
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: siteConfig.companyName,
-    alternateName: siteConfig.name,
+    name: siteConfig.name,
+    legalName: siteConfig.companyName,
+    alternateName: siteConfig.brandClaim,
     url: siteConfig.url,
-    logo: absoluteUrl("/images/mercure-logo.svg"),
+    logo: absoluteUrl(siteConfig.logo),
     email: hasRealValue(siteConfig.email) ? siteConfig.email : undefined,
     telephone: hasRealValue(siteConfig.phone) ? siteConfig.phone : undefined,
     address: address
@@ -58,7 +59,7 @@ export function websiteSchema(): JsonLd {
     inLanguage: "es-AR",
     publisher: {
       "@type": "Organization",
-      name: siteConfig.companyName,
+      name: siteConfig.name,
       url: siteConfig.url
     }
   };
@@ -77,7 +78,7 @@ export function serviceSchema(options: {
     url: absoluteUrl(options.url ?? "/"),
     provider: {
       "@type": "Organization",
-      name: siteConfig.companyName,
+      name: siteConfig.name,
       url: siteConfig.url
     },
     areaServed: {

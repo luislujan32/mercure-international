@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-label="Mercure Internacional">
-  <rect width="96" height="96" rx="16" fill="#083b5c"/>
-  <path d="M22 62V30h9l17 20 17-20h9v32h-9V43L51 62h-6L31 43v19h-9Z" fill="#ffffff"/>
-  <path d="M22 73h52v6H22z" fill="#d99a22"/>
-  <text x="116" y="43" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" fill="#083b5c">Mercure</text>
-  <text x="116" y="70" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f6b8f">Internacional</text>
-</svg>

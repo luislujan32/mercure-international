@@ -12,7 +12,7 @@ export const faqItems: FAQItem[] = [
       "Sí, podemos acompañarte desde la primera consulta. Analizamos tu operación, explicamos alternativas y te ayudamos a entender qué información necesitás reunir antes de avanzar."
   },
   {
-    question: "¿Mercure me ayuda a estimar costos antes de comprar?",
+    question: "¿Mercure Global me ayuda a estimar costos antes de comprar?",
     answer:
       "Podemos ayudarte a relevar datos de la operación y coordinar una pre-cotización logística. La estimación final depende del producto, origen, modalidad, documentación, condiciones comerciales y destino."
   },
@@ -39,7 +39,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "¿Hacen entrega final en mi provincia?",
     answer:
-      "Podemos coordinar entrega nacional según la ciudad de destino y el alcance definido para la operación, aprovechando la experiencia logística de Mercure en Argentina."
+      "Podemos coordinar entrega nacional según la ciudad de destino y el alcance definido para la operación, aprovechando la experiencia logística de Mercure Global en Argentina."
   },
   {
     question: "¿Puedo importar productos para revender?",

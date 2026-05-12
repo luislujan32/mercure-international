@@ -11,12 +11,13 @@ const formWhatsAppNumber = isRealWhatsAppNumber(siteConfig.whatsappNumber)
 
 <section id="cotizar" class="section-padding bg-white">
   <Container>
-    <div class="rounded-xl bg-marine p-6 text-white shadow-premium md:p-10 lg:p-12">
+    <div class="relative overflow-hidden rounded-xl bg-marine p-6 text-white shadow-premium md:p-10 lg:p-12">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_85%_8%,rgba(16,215,255,0.18),transparent_22rem),linear-gradient(135deg,#031225,#04162f)]"></div>
       <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-        <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.14em] text-gold">Pre-cotización</p>
+        <div class="relative">
+          <p class="text-sm font-semibold uppercase tracking-[0.14em] text-gold">Pre-cotización global</p>
           <h2 class="mt-3 max-w-2xl font-display text-3xl font-extrabold md:text-5xl">
-            Contanos qué querés importar
+            Contanos qué querés importar con Mercure Global
           </h2>
           <p class="mt-5 max-w-2xl text-base leading-8 text-mist">
             Contanos qué querés importar y un asesor podrá orientarte sobre la mejor
@@ -27,7 +28,9 @@ const formWhatsAppNumber = isRealWhatsAppNumber(siteConfig.whatsappNumber)
             producto, el origen, el destino y el nivel de urgencia.
           </p>
         </div>
-        <QuoteForm client:visible whatsappNumber={formWhatsAppNumber} />
+        <div class="relative">
+          <QuoteForm client:visible whatsappNumber={formWhatsAppNumber} />
+        </div>
       </div>
     </div>
   </Container>
