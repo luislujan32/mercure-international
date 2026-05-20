@@ -3,38 +3,38 @@ import type { ProcessStep } from "@/types/site";
 export const processSteps: ProcessStep[] = [
   {
     step: 1,
-    title: "Consulta inicial",
+    title: "Recibimos la consulta",
     description:
-      "Relevamos qué querés importar, desde dónde, hacia qué ciudad y con qué nivel de urgencia para ordenar la información de base."
+      "Relevamos si necesitás importar un producto o coordinar un proyecto logístico, con origen, destino, urgencia y alcance esperado."
   },
   {
     step: 2,
-    title: "Análisis de la operación",
+    title: "Analizamos carga y contexto",
     description:
-      "Evaluamos características del producto, peso, volumen, origen, destino y documentación disponible para detectar necesidades y posibles restricciones."
+      "Revisamos producto o tipo de carga, peso, volumen, frontera involucrada, documentación disponible, almacenamiento y descarga si aplica."
   },
   {
     step: 3,
-    title: "Propuesta logística",
+    title: "Coordinamos la red operativa",
     description:
-      "Coordinamos alternativas según urgencia, volumen y presupuesto, explicando el alcance de cada opción antes de avanzar."
+      "Articulamos proveedores y actores logísticos coordinados para evaluar alternativas internacionales, regionales o locales según la operación."
   },
   {
     step: 4,
-    title: "Coordinación internacional",
+    title: "Presentamos una propuesta",
     description:
-      "Acompañamos la coordinación con origen, transporte internacional y actores involucrados para ordenar la operación de punta a punta."
+      "Ordenamos alcance, modalidad, tiempos estimados y próximos pasos para que puedas decidir con un solo punto de contacto."
   },
   {
     step: 5,
-    title: "Arribo y gestión en Argentina",
+    title: "Acompañamos el seguimiento",
     description:
-      "Damos seguimiento al arribo y a las gestiones necesarias en Argentina, manteniendo comunicación clara sobre el estado de la carga."
+      "Centralizamos comunicación, avances e hitos relevantes durante la coordinación para reducir fricción entre participantes."
   },
   {
     step: 6,
-    title: "Entrega final",
+    title: "Coordinamos cierre operativo",
     description:
-      "Coordinamos la entrega nacional hasta la ciudad de destino, según el alcance definido para la operación."
+      "Gestionamos entrega, almacenamiento, descarga o derivación local cuando forma parte del alcance acordado para la operación."
   }
 ];

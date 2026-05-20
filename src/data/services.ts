@@ -2,59 +2,59 @@ import type { ServiceItem } from "@/types/site";
 
 export const services: ServiceItem[] = [
   {
-    title: "Asesoramiento para importar",
+    title: "Gestión de importaciones",
     description:
-      "Te acompañamos desde la primera consulta para entender el producto, el origen, el destino y los requisitos básicos de la operación antes de avanzar.",
+      "Centralizamos consultas, análisis de producto, origen, destino, modalidad de carga y próximos pasos para importar con más previsibilidad.",
     icon: "clipboard-check",
-    keywords: ["asesoramiento para importar", "importaciones a Argentina", "logística internacional"]
+    keywords: ["gestión de importaciones", "importaciones a Argentina", "logística internacional"]
   },
   {
-    title: "Transporte internacional aéreo",
+    title: "Coordinación freight forwarding",
     description:
-      "Coordinamos alternativas de carga aérea cuando la operación requiere mayor velocidad, menor volumen o una planificación sensible al tiempo.",
-    icon: "plane",
-    keywords: ["carga aérea internacional", "transporte aéreo internacional", "importación aérea"]
+      "Coordinamos alternativas aéreas, marítimas, terrestres o combinadas con proveedores y actores logísticos según alcance, urgencia y destino.",
+    icon: "route",
+    keywords: ["freight forwarding", "coordinación logística internacional", "carga internacional"]
   },
   {
-    title: "Transporte internacional marítimo",
+    title: "Transporte regional y de carga",
     description:
-      "Gestionamos opciones marítimas para cargas de mayor volumen, operaciones planificadas y esquemas que priorizan eficiencia logística.",
-    icon: "ship",
-    keywords: ["carga marítima internacional", "transporte marítimo", "importación marítima"]
-  },
-  {
-    title: "Carga consolidada",
-    description:
-      "Analizamos si tu mercadería puede integrarse en esquemas consolidados para optimizar recursos según origen, volumen y urgencia.",
-    icon: "boxes",
-    keywords: ["carga consolidada", "consolidación de carga", "importación consolidada"]
-  },
-  {
-    title: "Gestión documental y aduanera",
-    description:
-      "Te orientamos sobre documentación, coordinación operativa y pasos vinculados al ingreso de la mercadería en Argentina.",
-    icon: "file-text",
-    keywords: ["gestión documental", "gestión aduanera", "documentación para importar"]
-  },
-  {
-    title: "Seguro de carga",
-    description:
-      "Coordinamos alternativas de cobertura para reducir exposición ante riesgos propios del traslado internacional de mercadería.",
-    icon: "shield-check",
-    keywords: ["seguro de carga", "cobertura de mercadería", "seguro para importaciones"]
-  },
-  {
-    title: "Seguimiento de operación",
-    description:
-      "Mantenemos una comunicación clara durante el proceso para que tengas visibilidad sobre el avance y los próximos pasos.",
-    icon: "radar",
-    keywords: ["seguimiento de carga", "tracking logístico", "trazabilidad internacional"]
-  },
-  {
-    title: "Entrega nacional coordinada",
-    description:
-      "Coordinamos la entrega final en Argentina aprovechando la experiencia logística y la red nacional de Mercure Global.",
+      "Articulamos operaciones regionales y de carga hacia el NOA, frontera, Chile, Bolivia, Brasil y corredores de conexión con puertos.",
     icon: "truck",
-    keywords: ["entrega nacional", "logística nacional", "distribución en Argentina"]
+    keywords: ["transporte regional", "transporte de carga", "logística NOA"]
+  },
+  {
+    title: "Almacenamiento y descarga",
+    description:
+      "Evaluamos necesidades de recepción, descarga, almacenamiento y preparación de mercadería según el tipo de carga y el alcance del proyecto.",
+    icon: "warehouse",
+    keywords: ["almacenamiento", "descarga de mercadería", "infraestructura logística"]
+  },
+  {
+    title: "Proyectos logísticos",
+    description:
+      "Acompañamos operaciones industriales, mineras o comerciales que requieren planificación de cargas, rutas, tiempos y actores coordinados.",
+    icon: "network",
+    keywords: ["proyectos logísticos", "logística minera", "logística industrial"]
+  },
+  {
+    title: "Coordinación documental",
+    description:
+      "Ordenamos la información operativa y documental disponible para que cada etapa avance con criterios claros y comunicación centralizada.",
+    icon: "file-text",
+    keywords: ["coordinación documental", "documentación logística", "documentación para importar"]
+  },
+  {
+    title: "Seguimiento operativo",
+    description:
+      "Mantenemos visibilidad sobre avances, hitos, desvíos y próximos pasos para que el cliente no tenga que perseguir múltiples contactos.",
+    icon: "radar",
+    keywords: ["seguimiento operativo", "tracking logístico", "trazabilidad internacional"]
+  },
+  {
+    title: "Soluciones para empresas",
+    description:
+      "Integramos importaciones, cargas regionales, almacenamiento, descarga y entrega final en una gestión comercial y operativa unificada.",
+    icon: "building-2",
+    keywords: ["soluciones logísticas para empresas", "logística integral", "entrega final"]
   }
 ];

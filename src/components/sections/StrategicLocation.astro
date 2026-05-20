@@ -1,0 +1,59 @@
+---
+import { Icon } from "astro-icon/components";
+import Container from "@ui/Container.astro";
+import SectionHeader from "@ui/SectionHeader.astro";
+
+const locationPoints = [
+  {
+    icon: "lucide:map-pin",
+    title: "Base en Jujuy y foco NOA",
+    description:
+      "Ubicación estratégica para operaciones regionales, empresas industriales y proyectos mineros que necesitan coordinación logística cercana."
+  },
+  {
+    icon: "lucide:route",
+    title: "Frontera y corredores",
+    description:
+      "Mirada operativa sobre conexiones con Chile, Bolivia y Brasil, corredor bioceánico, Antofagasta y Buenos Aires puerto."
+  },
+  {
+    icon: "lucide:warehouse",
+    title: "Carga, almacenes y entrega",
+    description:
+      "Coordinación de transporte de carga, infraestructura, almacenamiento, descarga y entrega final cuando la operación lo requiere."
+  }
+];
+---
+
+<section class="section-padding bg-marine text-white">
+  <Container>
+    <div class="relative overflow-hidden rounded-xl border border-white/10 bg-navy p-6 shadow-premium md:p-10 lg:p-12">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(16,215,255,0.16),transparent_20rem),radial-gradient(circle_at_85%_8%,rgba(217,154,34,0.16),transparent_18rem)]"></div>
+      <div class="relative grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+        <SectionHeader
+          eyebrow="Ubicación estratégica"
+          title="Jujuy como punto de apoyo para operaciones internacionales y regionales"
+          description="Desde el NOA, Mercure Global coordina soluciones para importaciones, frontera, transporte regional y proyectos logísticos que conectan origen, corredores y destino final."
+          class="[&_h2]:text-white [&_p:last-child]:text-mist [&_p:first-child]:text-gold"
+        />
+        <div class="grid gap-4 md:grid-cols-3 lg:grid-cols-1">
+          {
+            locationPoints.map((point) => (
+              <article class="rounded-lg border border-white/10 bg-white/5 p-5 shadow-line backdrop-blur">
+                <div class="flex items-start gap-4">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-cyan/12 text-cyan">
+                    <Icon name={point.icon} class="h-5 w-5" aria-hidden="true" />
+                  </span>
+                  <div>
+                    <h3 class="font-bold text-white">{point.title}</h3>
+                    <p class="mt-2 text-sm leading-7 text-mist">{point.description}</p>
+                  </div>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

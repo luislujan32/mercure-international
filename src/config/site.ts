@@ -4,12 +4,12 @@ export const siteConfig = {
   brandClaimEs: "Soluciones logísticas internacionales",
   companyName: "Mercure SRL",
   description:
-    "Soluciones logísticas internacionales de Mercure SRL para empresas, pymes y comercios que necesitan coordinar importaciones hacia Argentina.",
+    "Unidad comercial e integradora de soluciones logísticas internacionales y regionales de Mercure SRL para importaciones, freight forwarding y proyectos de carga desde el NOA.",
   url: import.meta.env.SITE_URL ?? "https://www.mercuresrl.com",
   locale: "es_AR",
   defaultOgImage: "/og-image.jpg",
   logo: "/images/mercure-global-logo.svg",
-  whatsappNumber: "549XXXXXXXXXX",
+  whatsappNumber: "",
   phone: "Teléfono a definir",
   email: "Email a definir",
   addresses: [
@@ -35,6 +35,7 @@ export const siteConfig = {
   ],
   footerNavigation: [
     { label: "Importar desde China", href: "/importar-desde-china/" },
+    { label: "Proyectos logísticos", href: "/proyectos-logisticos/" },
     { label: "Carga aérea internacional", href: "/carga-aerea-internacional/" },
     { label: "Carga marítima internacional", href: "/carga-maritima-internacional/" },
     { label: "Asesoramiento para importar", href: "/asesoramiento-para-importar/" }

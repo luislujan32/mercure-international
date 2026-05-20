@@ -5,11 +5,11 @@ import Container from "@ui/Container.astro";
 import { siteConfig } from "@config/site";
 
 const operationSteps = [
-  { label: "Origen internacional", icon: "lucide:globe" },
-  { label: "Documentación", icon: "lucide:file-check-2" },
-  { label: "Carga en tránsito", icon: "lucide:container" },
-  { label: "Arribo a Argentina", icon: "lucide:map-pin-check" },
-  { label: "Entrega final", icon: "lucide:truck" }
+  { label: "Consulta inicial", icon: "lucide:messages-square" },
+  { label: "Red operativa", icon: "lucide:network" },
+  { label: "Carga coordinada", icon: "lucide:container" },
+  { label: "NOA y frontera", icon: "lucide:map-pin-check" },
+  { label: "Entrega final", icon: "lucide:warehouse" }
 ];
 ---
 
@@ -21,38 +21,39 @@ const operationSteps = [
   <div class="absolute left-1/3 top-24 h-px w-1/2 rotate-[-14deg] bg-gradient-to-r from-transparent via-cyan/45 to-transparent"></div>
   <Container class="relative grid gap-12 py-16 md:grid-cols-[1.05fr_0.95fr] md:items-center md:py-24">
     <div>
-      <p class="inline-flex rounded-full border border-cyan/25 bg-white/8 px-4 py-2 text-sm font-semibold text-cyan shadow-line">
-        {siteConfig.name} · {siteConfig.brandClaim}
+      <p class="inline-flex rounded-full border border-cyan/25 bg-white/10 px-4 py-2 text-sm font-semibold text-cyan shadow-line">
+        Importaciones · freight forwarding · proyectos logísticos
       </p>
       <h1 class="mt-6 max-w-4xl font-display text-4xl font-extrabold leading-tight text-white md:text-6xl">
-        Importá productos desde cualquier parte del mundo con respaldo global
+        Importaciones y proyectos logísticos con gestión integral desde el NOA
       </h1>
       <p class="mt-6 max-w-2xl text-lg leading-8 text-mist">
-        Mercure Global te acompaña con asesoramiento, coordinación internacional, trazabilidad
-        y entrega en Argentina para que tu operación avance con seguridad y transparencia.
+        Mercure Global centraliza la coordinación de operaciones internacionales y regionales
+        para que tu empresa cuente con un solo punto de contacto, desde la consulta inicial
+        hasta la entrega final.
       </p>
       <div class="mt-8 flex flex-col gap-3 sm:flex-row">
         <Button href="#cotizar" size="lg">Solicitar asesoramiento</Button>
         <Button href="#proceso" variant="inverse" size="lg">Ver cómo funciona</Button>
       </div>
       <p class="mt-8 max-w-xl border-l-4 border-signal pl-4 text-sm leading-7 text-mist">
-        Asesoramiento de punta a punta para reducir incertidumbre antes, durante y después
-        de la operación.
+        Ubicación estratégica en Jujuy, conexión con frontera y mirada regional para operaciones
+        hacia Chile, Bolivia, Brasil y corredores de salida portuaria.
       </p>
     </div>
 
-    <div class="rounded-xl border border-white/10 bg-white/8 p-4 shadow-premium backdrop-blur md:p-6" aria-label="Resumen visual del proceso logístico">
+    <div class="rounded-xl border border-white/10 bg-white/10 p-4 shadow-premium backdrop-blur md:p-6" aria-label="Resumen visual del proceso logístico">
       <div class="relative overflow-hidden rounded-lg border border-cyan/20 bg-harbor p-5 text-white">
         <div class="absolute -right-20 -top-20 size-48 rounded-full border border-cyan/20"></div>
         <div class="absolute right-5 top-5 flex size-11 items-center justify-center rounded-md bg-white/10 text-cyan">
           <Icon name="lucide:route" class="size-6" aria-hidden="true" />
         </div>
         <img src={siteConfig.logo} alt={siteConfig.name} class="h-16 w-auto rounded-md object-contain" loading="eager" />
-        <p class="mt-5 text-sm font-semibold text-gold">Operación internacional</p>
-        <p class="mt-2 max-w-xs font-display text-2xl font-extrabold">Coordinación punta a punta</p>
+        <p class="mt-5 text-sm font-semibold text-gold">Gestión integral</p>
+        <p class="mt-2 max-w-xs font-display text-2xl font-extrabold">Un solo punto de contacto</p>
         <div class="mt-5 grid grid-cols-3 gap-2 text-xs font-semibold text-mist">
-          <span class="rounded-md border border-white/10 bg-white/10 px-3 py-2">Origen</span>
-          <span class="rounded-md border border-white/10 bg-white/10 px-3 py-2">Tránsito</span>
+          <span class="rounded-md border border-white/10 bg-white/10 px-3 py-2">Importación</span>
+          <span class="rounded-md border border-white/10 bg-white/10 px-3 py-2">Carga</span>
           <span class="rounded-md border border-white/10 bg-white/10 px-3 py-2">Destino</span>
         </div>
       </div>

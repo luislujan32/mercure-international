@@ -4,9 +4,11 @@ import Benefits from "@sections/Benefits.astro";
 import FAQ from "@sections/FAQ.astro";
 import FinalCTA from "@sections/FinalCTA.astro";
 import Hero from "@sections/Hero.astro";
+import MainSolutions from "@sections/MainSolutions.astro";
 import Process from "@sections/Process.astro";
 import Routes from "@sections/Routes.astro";
 import Services from "@sections/Services.astro";
+import StrategicLocation from "@sections/StrategicLocation.astro";
 import TargetAudience from "@sections/TargetAudience.astro";
 import TrustStats from "@sections/TrustStats.astro";
 import { faqItems } from "@data/faq";
@@ -14,15 +16,15 @@ import { faqPageSchema, organizationSchema, serviceSchema, websiteSchema } from 
 
 type JsonLd = Record<string, unknown>;
 
-const title = "Mercure Global | Logística internacional para importar a Argentina";
+const title = "Mercure Global | Importaciones y proyectos logísticos desde el NOA";
 const description =
-  "Asesoramiento y coordinación de logística internacional para empresas, pymes y comercios que quieren importar productos hacia Argentina con respaldo global.";
+  "Gestión integral para importaciones, freight forwarding y proyectos logísticos internacionales o regionales desde Jujuy y el NOA, con un solo punto de contacto.";
 
 const schemas = [
   organizationSchema(),
   websiteSchema(),
   serviceSchema({
-    name: "Logística internacional para importaciones",
+    name: "Importaciones y proyectos logísticos con gestión integral",
     description,
     url: "/"
   }),
@@ -38,8 +40,10 @@ const schemas = [
 >
   <Hero />
   <TrustStats />
+  <MainSolutions />
   <Services />
   <Process />
+  <StrategicLocation />
   <Benefits />
   <TargetAudience />
   <Routes />

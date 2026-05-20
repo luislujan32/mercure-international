@@ -1,0 +1,62 @@
+---
+import { Icon } from "astro-icon/components";
+import Button from "@ui/Button.astro";
+import Container from "@ui/Container.astro";
+import SectionHeader from "@ui/SectionHeader.astro";
+
+const solutions = [
+  {
+    icon: "lucide:package-search",
+    title: "Importación de productos",
+    forWho:
+      "Para empresas, comercios o personas que quieren traer productos desde China u otros mercados.",
+    solves:
+      "Orientamos la consulta, analizamos producto, origen, cantidad, peso o volumen y coordinamos una propuesta para avanzar con mayor claridad.",
+    cta: "Cotizar importación"
+  },
+  {
+    icon: "lucide:container",
+    title: "Proyectos logísticos y freight forwarding",
+    forWho:
+      "Para empresas que necesitan coordinar cargas, contenedores, frontera, transporte internacional o regional.",
+    solves:
+      "Centralizamos actores logísticos, red operativa, almacenamiento, descarga y entrega final cuando la operación lo requiere.",
+    cta: "Consultar proyecto"
+  }
+];
+---
+
+<section id="soluciones" class="section-padding bg-white">
+  <Container>
+    <SectionHeader
+      eyebrow="Soluciones principales"
+      title="Dos líneas de gestión, un solo punto de contacto"
+      description="Mercure Global acompaña tanto importaciones puntuales como proyectos logísticos más amplios, integrando consulta, cotización, coordinación y seguimiento."
+    />
+    <div class="mt-10 grid gap-5 lg:grid-cols-2">
+      {
+        solutions.map((solution) => (
+          <article class="flex h-full flex-col rounded-lg border border-line bg-smoke p-6 shadow-line md:p-8">
+            <div class="flex h-12 w-12 items-center justify-center rounded-md bg-marine text-cyan shadow-soft">
+              <Icon name={solution.icon} class="h-6 w-6" aria-hidden="true" />
+            </div>
+            <h3 class="mt-6 text-2xl font-extrabold text-ink">{solution.title}</h3>
+            <div class="mt-5 space-y-4 text-sm leading-7 text-steel md:text-base">
+              <p>
+                <strong class="font-bold text-graphite">Para quién es: </strong>
+                {solution.forWho}
+              </p>
+              <p>
+                <strong class="font-bold text-graphite">Qué resuelve: </strong>
+                {solution.solves}
+              </p>
+            </div>
+            <div class="mt-7">
+              <Button href="/#cotizar" variant="secondary">{solution.cta}</Button>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </Container>
+</section>

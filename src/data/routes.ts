@@ -4,7 +4,7 @@ export const routes: RouteItem[] = [
   {
     title: "Importaciones desde China",
     description:
-      "Acompañamos operaciones desde uno de los principales orígenes de compra internacional, con análisis de transporte, documentación y entrega en Argentina.",
+      "Centralizamos consultas de productos, proveedores, carga, documentación y entrega en Argentina desde uno de los principales mercados de compra.",
     href: "/importar-desde-china/"
   },
   {
@@ -25,12 +25,18 @@ export const routes: RouteItem[] = [
   {
     title: "Logística internacional para el NOA",
     description:
-      "Integramos la coordinación internacional con necesidades de empresas del Noroeste Argentino que buscan importar con respaldo operativo."
+      "Integramos coordinación internacional y regional con necesidades de empresas del Noroeste Argentino, frontera y corredores hacia puertos."
   },
   {
     title: "Logística internacional para Jujuy",
     description:
-      "Acompañamos a empresas de Jujuy que necesitan importar mercadería, insumos, repuestos o maquinaria hacia la provincia."
+      "Acompañamos a empresas de Jujuy que necesitan importar, mover cargas regionales o coordinar proyectos con conexión hacia Chile y Bolivia."
+  },
+  {
+    title: "Proyectos logísticos y freight forwarding",
+    description:
+      "Gestión integral para cargas, contenedores, frontera, almacenamiento, descarga y entrega final con foco en operaciones del NOA.",
+    href: "/proyectos-logisticos/"
   },
   {
     title: "Carga aérea internacional",

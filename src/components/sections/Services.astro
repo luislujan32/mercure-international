@@ -5,14 +5,14 @@ import SectionHeader from "@ui/SectionHeader.astro";
 import { services } from "@data/services";
 
 const serviceIcons: Record<string, string> = {
-  "Asesoramiento para importar": "lucide:clipboard-check",
-  "Transporte internacional aéreo": "lucide:plane",
-  "Transporte internacional marítimo": "lucide:ship",
-  "Carga consolidada": "lucide:boxes",
-  "Gestión documental y aduanera": "lucide:file-text",
-  "Seguro de carga": "lucide:shield-check",
-  "Seguimiento de operación": "lucide:radar",
-  "Entrega nacional coordinada": "lucide:truck"
+  "Gestión de importaciones": "lucide:clipboard-check",
+  "Coordinación freight forwarding": "lucide:route",
+  "Transporte regional y de carga": "lucide:truck",
+  "Almacenamiento y descarga": "lucide:warehouse",
+  "Proyectos logísticos": "lucide:network",
+  "Coordinación documental": "lucide:file-text",
+  "Seguimiento operativo": "lucide:radar",
+  "Soluciones para empresas": "lucide:building-2"
 };
 ---
 
@@ -20,8 +20,8 @@ const serviceIcons: Record<string, string> = {
   <Container>
     <SectionHeader
       eyebrow="Servicios"
-      title="Soluciones para coordinar tu importación de punta a punta"
-      description="Desde el análisis inicial hasta la entrega final, coordinamos alternativas logísticas según origen, urgencia, volumen y destino."
+      title="Soluciones logísticas coordinadas desde un solo lugar"
+      description="Integramos importaciones, freight forwarding, transporte regional, almacenamiento, descarga y seguimiento operativo según el alcance de cada operación."
     />
     <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {

@@ -1,0 +1,107 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@ui/Button.astro";
+import Container from "@ui/Container.astro";
+import SectionHeader from "@ui/SectionHeader.astro";
+import { serviceSchema } from "@lib/schema";
+
+const title = "Proyectos logísticos y freight forwarding en NOA | Mercure Global";
+const description =
+  "Gestión integral para cargas, contenedores, transporte internacional y regional, frontera, almacenamiento, descarga y entrega final desde Jujuy y el NOA.";
+const pageFaq = [
+  {
+    question: "¿Qué tipo de proyectos logísticos pueden analizar?",
+    answer:
+      "Podemos analizar operaciones con cargas, contenedores, transporte internacional o regional, frontera, almacenamiento, descarga, entrega final y necesidades específicas de coordinación."
+  },
+  {
+    question: "¿Trabajan con operaciones vinculadas al NOA?",
+    answer:
+      "Sí, Mercure Global tiene foco en operaciones del NOA y Jujuy, incluyendo conexiones con Chile, Bolivia, Brasil, corredor bioceánico, Antofagasta y Buenos Aires puerto según el caso."
+  }
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="/proyectos-logisticos/"
+  schema={serviceSchema({
+    name: "Proyectos logísticos y freight forwarding",
+    description,
+    url: "/proyectos-logisticos/"
+  })}
+>
+  <section class="bg-marine py-16 text-white md:py-24">
+    <Container class="grid gap-10 lg:grid-cols-[1fr_0.78fr] lg:items-center">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.14em] text-gold">
+          Proyectos logísticos
+        </p>
+        <h1 class="mt-4 max-w-4xl font-display text-4xl font-extrabold leading-tight md:text-6xl">
+          Proyectos logísticos y freight forwarding con coordinación integral
+        </h1>
+        <p class="mt-6 max-w-3xl text-lg leading-8 text-mist">
+          Mercure Global centraliza la gestión de cargas, corredores, frontera,
+          almacenamiento, descarga y entrega final para que tu empresa cuente con un solo
+          punto de contacto operativo.
+        </p>
+        <Button href="/#cotizar" size="lg" class="mt-8">Consultar por un proyecto logístico</Button>
+      </div>
+      <div class="rounded-xl border border-white/10 bg-white/10 p-6 shadow-line">
+        <h2 class="font-display text-2xl font-extrabold">Qué relevamos</h2>
+        <ul class="mt-5 grid gap-3 text-sm leading-7 text-mist">
+          <li>Tipo de carga, volumen, peso, origen y destino.</li>
+          <li>Frontera, corredor o puerto involucrado.</li>
+          <li>Necesidad de transporte regional, almacenamiento o descarga.</li>
+          <li>Urgencia, documentación disponible y alcance esperado.</li>
+        </ul>
+      </div>
+    </Container>
+  </section>
+
+  <section class="section-padding bg-smoke">
+    <Container>
+      <SectionHeader
+        eyebrow="Coordinación integral"
+        title="Un equipo para ordenar red operativa, actores logísticos y próximos pasos"
+        description="Acompañamos proyectos donde la operación necesita integrar decisiones de carga, transporte, frontera, almacenamiento y entrega sin que el cliente tenga que gestionar cada frente por separado."
+      />
+      <div class="mt-10 grid gap-4 md:grid-cols-3">
+        <article class="rounded-lg border border-line bg-white p-5 shadow-line">
+          <h2 class="text-lg font-bold text-ink">Cargas y contenedores</h2>
+          <p class="mt-3 text-sm leading-7 text-steel">
+            Analizamos alcance, modalidad, volumen, tiempos y condiciones para coordinar una propuesta viable.
+          </p>
+        </article>
+        <article class="rounded-lg border border-line bg-white p-5 shadow-line">
+          <h2 class="text-lg font-bold text-ink">Frontera y corredores</h2>
+          <p class="mt-3 text-sm leading-7 text-steel">
+            Evaluamos conexiones regionales con Chile, Bolivia, Brasil, Antofagasta, Buenos Aires puerto y corredores del NOA.
+          </p>
+        </article>
+        <article class="rounded-lg border border-line bg-white p-5 shadow-line">
+          <h2 class="text-lg font-bold text-ink">Almacenamiento y descarga</h2>
+          <p class="mt-3 text-sm leading-7 text-steel">
+            Coordinamos necesidades de recepción, almacenamiento, descarga y entrega final cuando forman parte de la operación.
+          </p>
+        </article>
+      </div>
+    </Container>
+  </section>
+
+  <section class="section-padding bg-white">
+    <Container>
+      <SectionHeader eyebrow="Dudas comunes" title="Preguntas sobre proyectos logísticos" />
+      <div class="mt-8 grid gap-3">
+        {pageFaq.map((item) => (
+          <details class="rounded-lg border border-line bg-white p-5 shadow-line">
+            <summary class="cursor-pointer text-base font-bold text-ink">{item.question}</summary>
+            <p class="mt-3 text-sm leading-7 text-steel">{item.answer}</p>
+          </details>
+        ))}
+      </div>
+      <Button href="/#cotizar" size="lg" class="mt-8">Consultar por un proyecto logístico</Button>
+    </Container>
+  </section>
+</BaseLayout>

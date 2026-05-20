@@ -16,18 +16,27 @@ const urgencyOptions = [
   "Estoy evaluando opciones",
   "Lo necesito pronto",
   "Ya compré el producto",
-  "Necesito asesoramiento antes de comprar"
+  "Necesito asesoramiento antes de avanzar"
 ];
 
+const inquiryTypeOptions = ["Importar un producto", "Consultar por un proyecto logístico"];
+const yesNoOptions = ["No sé todavía", "Sí", "No"];
+
 const initialValues: QuoteFormValues = {
+  inquiryType: inquiryTypeOptions[0],
   fullName: "",
   company: "",
   whatsapp: "",
   email: "",
   product: "",
+  productLink: "",
   originCountry: "",
   destination: "",
+  quantity: "",
   weightVolume: "",
+  storageRequired: yesNoOptions[0],
+  unloadingRequired: yesNoOptions[0],
+  borderInvolved: "",
   urgency: urgencyOptions[0],
   message: ""
 };
@@ -47,8 +56,9 @@ function validate(values: QuoteFormValues): FormErrors {
   } else if (!validateEmail(values.email)) {
     errors.email = "Ingresá un email válido.";
   }
-  if (!values.product.trim()) errors.product = "Contanos qué producto querés importar.";
-  if (!values.originCountry.trim()) errors.originCountry = "Ingresá el país de origen.";
+  if (!values.inquiryType.trim()) errors.inquiryType = "Seleccioná el tipo de consulta.";
+  if (!values.product.trim()) errors.product = "Contanos el producto o tipo de carga.";
+  if (!values.originCountry.trim()) errors.originCountry = "Ingresá el origen de la operación.";
   if (!values.destination.trim()) errors.destination = "Ingresá ciudad o provincia de destino.";
 
   return errors;
@@ -110,6 +120,25 @@ export default function QuoteForm({ whatsappNumber }: QuoteFormProps) {
       noValidate
     >
       <div className="grid gap-5 md:grid-cols-2">
+        <label className={`${labelClass} md:col-span-2`}>
+          ¿Qué necesitás cotizar?
+          <select
+            className={inputClass}
+            value={values.inquiryType}
+            onChange={(event) => updateField("inquiryType", event.target.value)}
+            {...fieldProps("inquiryType")}
+          >
+            {inquiryTypeOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+          {errors.inquiryType && (
+            <p id="inquiryType-error" className={errorClass}>{errors.inquiryType}</p>
+          )}
+        </label>
+
         <label className={labelClass}>
           Nombre y apellido
           <input
@@ -162,7 +191,7 @@ export default function QuoteForm({ whatsappNumber }: QuoteFormProps) {
         </label>
 
         <label className={labelClass}>
-          Producto a importar
+          Producto o tipo de carga
           <input
             className={inputClass}
             value={values.product}
@@ -173,7 +202,18 @@ export default function QuoteForm({ whatsappNumber }: QuoteFormProps) {
         </label>
 
         <label className={labelClass}>
-          País de origen
+          Link del producto, si tenés
+          <input
+            className={inputClass}
+            value={values.productLink}
+            onChange={(event) => updateField("productLink", event.target.value)}
+            inputMode="url"
+            placeholder="URL del proveedor o marketplace"
+          />
+        </label>
+
+        <label className={labelClass}>
+          Origen
           <input
             className={inputClass}
             value={values.originCountry}
@@ -187,7 +227,7 @@ export default function QuoteForm({ whatsappNumber }: QuoteFormProps) {
         </label>
 
         <label className={labelClass}>
-          Ciudad/provincia de destino
+          Destino
           <input
             className={inputClass}
             value={values.destination}
@@ -201,12 +241,62 @@ export default function QuoteForm({ whatsappNumber }: QuoteFormProps) {
         </label>
 
         <label className={labelClass}>
+          Cantidad
+          <input
+            className={inputClass}
+            value={values.quantity}
+            onChange={(event) => updateField("quantity", event.target.value)}
+            placeholder="Ej: 500 unidades, 1 contenedor"
+          />
+        </label>
+
+        <label className={labelClass}>
           Peso o volumen aproximado
           <input
             className={inputClass}
             value={values.weightVolume}
             onChange={(event) => updateField("weightVolume", event.target.value)}
             placeholder="Ej: 80 kg, 2 pallets, 1 m3"
+          />
+        </label>
+
+        <label className={labelClass}>
+          ¿Requiere almacenamiento?
+          <select
+            className={inputClass}
+            value={values.storageRequired}
+            onChange={(event) => updateField("storageRequired", event.target.value)}
+          >
+            {yesNoOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className={labelClass}>
+          ¿Requiere descarga?
+          <select
+            className={inputClass}
+            value={values.unloadingRequired}
+            onChange={(event) => updateField("unloadingRequired", event.target.value)}
+          >
+            {yesNoOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className={labelClass}>
+          Frontera involucrada, si aplica
+          <input
+            className={inputClass}
+            value={values.borderInvolved}
+            onChange={(event) => updateField("borderInvolved", event.target.value)}
+            placeholder="Ej: Chile, Bolivia, Brasil"
           />
         </label>
 
@@ -226,12 +316,12 @@ export default function QuoteForm({ whatsappNumber }: QuoteFormProps) {
         </label>
 
         <label className={`${labelClass} md:col-span-2`}>
-          Mensaje adicional
+          Detalle del proyecto o mensaje adicional
           <textarea
             className={`${inputClass} min-h-32 resize-y`}
             value={values.message}
             onChange={(event) => updateField("message", event.target.value)}
-            placeholder="Sumá cualquier detalle útil sobre proveedor, producto, plazos o documentación."
+            placeholder="Sumá cualquier detalle útil sobre proveedor, carga, plazos, documentación, almacenamiento o entrega."
           />
         </label>
       </div>

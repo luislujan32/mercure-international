@@ -17,6 +17,11 @@ export const faqItems: FAQItem[] = [
       "Podemos ayudarte a relevar datos de la operación y coordinar una pre-cotización logística. La estimación final depende del producto, origen, modalidad, documentación, condiciones comerciales y destino."
   },
   {
+    question: "¿También coordinan proyectos logísticos y freight forwarding?",
+    answer:
+      "Sí, analizamos cargas, contenedores, origen, destino, frontera, almacenamiento, descarga y entrega final para coordinar una propuesta integral según el alcance de la operación."
+  },
+  {
     question: "¿Trabajan con importaciones desde China?",
     answer:
       "Sí, acompañamos consultas para importaciones desde China hacia Argentina. Evaluamos tipo de carga, volumen, urgencia y documentación para coordinar alternativas aéreas, marítimas o consolidadas cuando corresponda."
@@ -34,7 +39,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "¿Me asesoran con documentación?",
     answer:
-      "Sí, te orientamos sobre la documentación necesaria y la coordinación operativa vinculada a la importación. Los requisitos pueden variar según producto, origen y condiciones de la operación."
+      "Sí, te orientamos sobre la documentación necesaria y la coordinación operativa vinculada a importaciones y cargas internacionales. Los requisitos pueden variar según producto, origen y condiciones de la operación."
   },
   {
     question: "¿Hacen entrega final en mi provincia?",

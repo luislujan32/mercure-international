@@ -4,7 +4,7 @@ export const targetAudience: TargetAudienceItem[] = [
   {
     title: "Pymes",
     description:
-      "Para empresas que buscan importar productos, insumos o equipamiento con asesoramiento claro antes de tomar decisiones."
+      "Para empresas que buscan importar productos, insumos o equipamiento con orientación clara y gestión centralizada."
   },
   {
     title: "Comercios",
@@ -14,7 +14,7 @@ export const targetAudience: TargetAudienceItem[] = [
   {
     title: "Industrias",
     description:
-      "Para operaciones vinculadas a insumos, repuestos, maquinaria o componentes que requieren planificación logística."
+      "Para operaciones vinculadas a insumos, repuestos, maquinaria, cargas regionales o componentes que requieren planificación logística."
   },
   {
     title: "Emprendedores",
@@ -22,13 +22,13 @@ export const targetAudience: TargetAudienceItem[] = [
       "Para quienes quieren dar sus primeros pasos en importación y necesitan entender requisitos, alternativas y próximos pasos."
   },
   {
-    title: "Empresas del NOA",
+    title: "Empresas del NOA y frontera",
     description:
-      "Para compañías del Noroeste Argentino que buscan integrar logística internacional con entrega nacional coordinada."
+      "Para compañías que buscan integrar logística internacional, regional y local desde una ubicación estratégica en Jujuy."
   },
   {
-    title: "Empresas que importan insumos, repuestos o maquinaria",
+    title: "Proyectos mineros e industriales",
     description:
-      "Para organizaciones que necesitan acompañamiento en operaciones de abastecimiento productivo o comercial."
+      "Para organizaciones que necesitan coordinar cargas, almacenamiento, descarga y entrega final con varios actores logísticos."
   }
 ];

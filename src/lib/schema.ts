@@ -73,7 +73,7 @@ export function serviceSchema(options: {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: options.name ?? "Logística internacional para importaciones",
+    name: options.name ?? "Importaciones y proyectos logísticos con gestión integral",
     description: options.description ?? siteConfig.description,
     url: absoluteUrl(options.url ?? "/"),
     provider: {
@@ -85,7 +85,7 @@ export function serviceSchema(options: {
       "@type": "Country",
       name: "Argentina"
     },
-    serviceType: "Coordinación de logística internacional para importaciones"
+    serviceType: "Coordinación de importaciones, freight forwarding y proyectos logísticos"
   };
 }
 

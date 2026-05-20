@@ -3,7 +3,7 @@ import { siteConfig } from "@config/site";
 import { buildWhatsAppUrl, isRealWhatsAppNumber } from "@lib/whatsapp";
 
 const message =
-  "Hola Mercure, quiero recibir asesoramiento para una operación de logística internacional.";
+  "Hola Mercure, quiero consultar por una importación o proyecto logístico.";
 const shouldRender = isRealWhatsAppNumber(siteConfig.whatsappNumber);
 const href = shouldRender ? buildWhatsAppUrl(siteConfig.whatsappNumber, message) : "";
 ---
