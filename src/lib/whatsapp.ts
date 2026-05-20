@@ -45,7 +45,7 @@ export function buildWhatsAppUrl(number: string, message: string): string {
 export function buildQuoteWhatsAppMessage(values: QuoteFormValues): string {
   const optionalMessage = values.message.trim() || "Sin mensaje adicional.";
   const optionalWeightVolume = values.weightVolume.trim() || "No especificado.";
-  const optionalProductLink = values.productLink.trim() || "No especificado.";
+  const optionalReference = values.productLink.trim() || "No especificado.";
   const optionalQuantity = values.quantity.trim() || "No especificado.";
   const optionalBorder = values.borderInvolved.trim() || "No especificado.";
 
@@ -59,7 +59,7 @@ Datos de la consulta:
 - WhatsApp: ${values.whatsapp}
 - Email: ${values.email}
 - Producto o tipo de carga: ${values.product}
-- Link del producto: ${optionalProductLink}
+- Link o referencia: ${optionalReference}
 - Origen: ${values.originCountry}
 - Destino: ${values.destination}
 - Cantidad: ${optionalQuantity}

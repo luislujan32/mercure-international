@@ -15,7 +15,7 @@ type FormErrors = Partial<Record<keyof QuoteFormValues, string>>;
 const urgencyOptions = [
   "Estoy evaluando opciones",
   "Lo necesito pronto",
-  "Ya compré el producto",
+  "Ya tengo proveedor o carga definida",
   "Necesito asesoramiento antes de avanzar"
 ];
 
@@ -202,13 +202,13 @@ export default function QuoteForm({ whatsappNumber }: QuoteFormProps) {
         </label>
 
         <label className={labelClass}>
-          Link del producto, si tenés
+          Link o referencia, si aplica
           <input
             className={inputClass}
             value={values.productLink}
             onChange={(event) => updateField("productLink", event.target.value)}
             inputMode="url"
-            placeholder="URL del proveedor o marketplace"
+            placeholder="URL del proveedor, marketplace o referencia"
           />
         </label>
 
